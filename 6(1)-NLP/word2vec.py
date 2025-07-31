@@ -46,7 +46,10 @@ class Word2Vec(nn.Module):
 
     def _train_cbow(
         self,
-        corpus, tokenizer, criterion, optimizer
+        corpus: list[str],
+        tokenizer: PreTrainedTokenizer,
+        criterion: nn.CrossEntropyLoss , 
+        optimizer: torch.optim.Optimizer,
     ) -> None:
         # 구현하세요!
         for sentence in corpus:
@@ -86,9 +89,9 @@ class Word2Vec(nn.Module):
     def _train_skipgram(
         self,
         corpus: list[str],
-        tokenizer,
-        criterion,
-        optimizer
+        tokenizer: PreTrainedTokenizer,
+        criterion: nn.CrossEntropyLoss,
+        optimizer: torch.optim.Optimizer,
     ) -> None:
         # 구현하세요!
         for sentence in corpus:
