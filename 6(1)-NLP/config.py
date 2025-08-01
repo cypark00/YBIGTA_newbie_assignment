@@ -15,4 +15,4 @@ hidden_size = 256
 num_classes = 4
 lr = 2e-03
 num_epochs = 200
-batch_size = 64
+batch_size = 16
